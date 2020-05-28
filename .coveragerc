@@ -1,0 +1,9 @@
+[run]
+branch = True
+source = aiohttp_metrics
+
+[html]
+directory = tests/coverage
+
+[xml]
+output = tests/coverage.xml
