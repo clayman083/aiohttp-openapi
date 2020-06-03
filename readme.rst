@@ -1,4 +1,4 @@
-aiohttp_metrics
+aiohttp_openapi
 ===============
 
 .. image:: https://travis-ci.com/clayman083/aiohttp-openapi.svg?branch=master
