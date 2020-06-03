@@ -15,6 +15,7 @@ from marshmallow import Schema
 class ParameterIn(Enum):
     cookies = "cookies"
     header = "header"
+    path = "path"
     query = "query"
 
 
@@ -121,6 +122,7 @@ def setup(
     description: str,
     openapi_version: str = "3.0.2",
     path: str = "/api/spec.json",
+    validate: bool = False
 ) -> None:
 
     app["spec"] = APISpec(
@@ -141,4 +143,5 @@ def setup(
                 operations={route.method.lower(): operation_spec},
             )
 
-    validate_spec(app["spec"])
+    if validate:
+        validate_spec(app["spec"])
